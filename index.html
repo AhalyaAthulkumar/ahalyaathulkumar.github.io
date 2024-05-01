@@ -227,9 +227,8 @@
                                     <p style="display: inline;">hours to go</p>
                                 </div>
                                 <script>
-                                    document.getElementById('count').innerHTML = 19889 - Math.floor(new Date()/86400000);
-                                    console.log(new Date());
-                                    document.getElementById('count1').innerHTML = 33 - new Date().getHours();
+                                    document.getElementById('count').innerHTML = 19889 - Math.floor((new Date()/1 - 16200000)/86400000);
+                                    document.getElementById('count1').innerHTML = 33 - (new Date().getHours()<12? new Date().getHours()+24 : new Date().getHours());
                                 </script>
                             </div>
                         </div>
