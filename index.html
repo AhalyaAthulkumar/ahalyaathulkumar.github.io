@@ -224,14 +224,20 @@
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
                                     <span class="counter" style="display: inline;"><div id="count"></div></span>
-                                    <p style="display: inline;">days &nbsp; &nbsp;</p>
-                                    <h2 style="display: inline;">& &nbsp;</h2>
+                                    <p style="display: inline;">days</p>
+                                    <h2 style="display: inline;">, &nbsp;</h2>
+                                    
                                     <span class="counter" style="display: inline;"><div id="count1"></div></span>
-                                    <p style="display: inline;">hours to go</p>
+                                    <p style="display: inline;">hours &nbsp;</p>
+                                    <h2 style="display: inline;">& &nbsp;</h2>
+
+                                    <span class="counter" style="display: inline;"><div id="count2"></div></span>
+                                    <p style="display: inline;">minutes to go</p>
                                 </div>
                                 <script>
                                     document.getElementById('count').innerHTML = 19889 - Math.floor((new Date()/1 - 16200000)/86400000);
-                                    document.getElementById('count1').innerHTML = 33 - (new Date().getHours()<10? new Date().getHours()+24 : new Date().getHours());
+                                    document.getElementById('count1').innerHTML = 32 - (new Date().getHours()<9? new Date().getHours()+24 : new Date().getHours());
+                                    document.getElementById('count2').innerHTML = 60 - (new Date().getMinutes());
                                 </script>
                             </div>
                         </div>
